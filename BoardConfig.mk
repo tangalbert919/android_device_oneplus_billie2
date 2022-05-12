@@ -145,6 +145,9 @@ ODM_MANIFEST_2_FILES := $(DEVICE_PATH)/manifest_2.xml
 ODM_MANIFEST_8_FILES := $(DEVICE_PATH)/manifest_8.xml
 ODM_MANIFEST_SKUS += 2 8
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oplus
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
