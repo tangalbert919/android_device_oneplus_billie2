@@ -1,8 +1,6 @@
 # Binaries
-/(vendor|system/vendor)/bin/dashd                      u:object_r:dashd_exec:s0
 /(vendor|system/vendor)/bin/opf-service                u:object_r:opf_exec:s0
 /(vendor|system/vendor)/bin/vl53l1_daemon_main         u:object_r:vl53l1_daemon_main_exec:s0
-/(vendor|system/vendor)/bin/wlchgd                     u:object_r:wlchgd_exec:s0
 
 # Block devices
 /dev/block/platform/soc/1d84000.ufshc/by-name/config             u:object_r:frp_block_device:s0
@@ -32,7 +30,6 @@
 # Devices
 /dev/byte-cntr            u:object_r:byte_cntr_device:s0
 /dev/cc_ctl               u:object_r:graphics_device:s0
-/dev/dash                 u:object_r:dash_device:s0
 /dev/fragment_monitor     u:object_r:fragment_monitor_device:s0
 /dev/esfp0                u:object_r:fingerprintd_device:s0
 /dev/ht_ctl               u:object_r:graphics_device:s0
@@ -44,7 +41,6 @@
 /dev/param                u:object_r:param_device:s0
 /dev/skin_thermal         u:object_r:therm_device:s0
 /dev/stmvl53l1_ranging    u:object_r:vl53l1_device:s0
-/dev/wlchg                u:object_r:wlchg_device:s0
 
 # HALs
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus                          u:object_r:hal_lineage_livedisplay_qti_exec:s0
@@ -83,7 +79,6 @@
 
 # Sys files (wakeup)
 /sys/devices/platform/soc/c440000\.qcom,spmi/spmi-0/spmi0-00/c440000\.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/soc:oneplus_wlchg/power_supply/wireless/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/diag/diag/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_aac/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_alac/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
