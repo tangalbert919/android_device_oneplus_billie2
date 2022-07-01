@@ -1,64 +1,52 @@
-libnpu.so
-unnhal-acc-hta.so
-libarcsoft_hdr_denoise_api.so
-libarcsoft_tricam_calibration.so
-libarcsoft_tricam_verification.so
-libAlgoProcess.so
-libPolarrRender.so
-libapsexif.so
-libapsjpeg.so
-libmpbase.so
-libarcsoft_high_dynamic_range.so
-libarcsoft_smart_denoise.so
-libarcsoft_low_light_hdr.so
-libarcsoft_hdr_couple_api.so
-libarcsoft_high_dynamic_range_couple.so
-libarcsoft_super_night_raw.so
-libarcsoft_hdrplus_hvx_stub.so
-libarcsoft_hta.so
-libVDSuperPhotoAPI.so
-libarcsoft_beautyshot.so
-libVDBlurless.so
-libVDDualCameraBlurlessAPI.so
-libsnpe_loader.so
-libapsdarksight.so
-libaps_frame_registration.so
-libSNPE.so
-libsymphony-cpu.so
-libsymphonypower.so
-libc++_shared.so
-libstdc++.so
-libarcsoft_dualcam_bokeh_api.so
-libarcsoft_dualcam_refocus_preview.so
-libarcsoft_dualcam_refocus_left.so
-libarcsoft_dualcam_refocus_right.so
-libarcsoft_dualcam_refocus_uw.so
-libarcsoft_portrait_distortion_correction.so
-libstblur_capture_api.so
-libmorpho_image_refiner_deflicker.so
-lib_oneplus_watermark.so
+libAlgoProcess.so 64
 vendor.qti.hardware.camera.postproc@1.0.so
-libSuperSensor.so
-libSuperSensorFallback.so
-libSuperSensorProcessor.so
-libSuperSensorProcessorCWrapper.so
-lib_oneplus_vivideffect.so
-libnightvision.so
-libfastov_dsp.so
-libAncSegBaseSdk.so
-libancbase_segbase.so
-libop-bokeh.so
-lib_bokehlib.so
-libhta.so
-libyuv2.so
-libsnpe_dsp_domains.so
-libsnpe_dsp_domains_v2.so
-libalCFR.so
-libarcsoft_smart_denoise_v4.so
-libarcsoft_high_dynamic_range_v4.so
-libarcsoft_hdr_denoise_api_v4.so
-libarcsoft_fringe_remove.so
-libarcsoft_video_fringing_correction.so
+libPolarrRender.so 64
+libapsexif.so 64
+libapsjpeg.so 64
+libmpbase.so 64
+libarcsoft_high_dynamic_range.so 64
+libarcsoft_hdr_denoise_api.so 64
+libarcsoft_low_light_hdr.so 64
+libarcsoft_hdr_couple_api.so 64
+libarcsoft_high_dynamic_range_couple.so 64
+libarcsoft_smart_denoise.so 64
+libPerfectlyClearCrux.so 64
+libVDSuperPhotoAPI.so 64
+libFaceBeautyCap.so 64
+libFaceBeautyPre.so 64
+libstface_fd_api.so 64
+libVDBlurless.so 64
+libVDDualCameraBlurlessAPI.so 64
+libstblur_api.so 64
+libstblur_capture_api.so 64
+libc++_shared.so 64
+libstdc++.so
+libarcsoft_dualcam_bokeh_api.so 64
+libpreview.decision.so 64
+libalgo.superphoto.so 64
+libalgo.singleblur.so 64
+libalgo.rotatemirror.so 64
+libalgo.rectify.so 64
+libalgo.hdr.so 64
+libalgo.filter.so 64
+libalgo.facebeauty.so 64
+libalgo.bokeh.so 64
+libalgo.blurless.so 64
+libcvface_api.so 64
+libPreviewAlgo.dummy.so 64
+libPreviewAlgo.pf.so 64
+libPreviewAlgo.asd.so 64
+libPreviewAlgo.prefacebeauty.so 64
+libXDocProcessSDK.so 64
+libarcsoft_low_light_hdr_for_neon.so 64
+libml_util.so 64
+libsnpeml.so 64
+libcalculator.so 64
+libcalculator_domains.so 64
+libhta.so 64
+libsnpe_adsp.so 64
+libsnpe_dsp_domains.so 64
+libsnpe_dsp_domains_v2.so 64
 libqti-perfd-client.so
 libadsprpc.so
 libcdsprpc.so
