@@ -119,7 +119,7 @@ vendor.camera.aux.packagelist=com.oem.autotest,com.oneplus.factorymode,com.onepl
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
-ro.soc.model=SM8250
+ro.soc.model=SM4250
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
