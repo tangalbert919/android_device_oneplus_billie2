@@ -2,8 +2,6 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
-audio.deep_buffer.media=true
-audio.offload.video=false
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
@@ -25,27 +23,26 @@ ro.vendor.dolby.dax.version=DAX3_3.5.6.11_r1
 vendor.audio.adm.buffering.ms=2
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
-vendor.audio.dtmf.volume=35
 vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
-vendor.audio.feature.anc_headset.enable=false
+vendor.audio.feature.anc_headset.enable=true
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.battery_listener.enable=true
 vendor.audio.feature.compr_cap.enable=false
-vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.compress_in.enable=true
 vendor.audio.feature.compress_meta_data.enable=true
+vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.concurrent_capture.enable=true
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.deepbuffer_as_primary.enable=false
 vendor.audio.feature.display_port.enable=true
 vendor.audio.feature.dsm_feedback.enable=false
 vendor.audio.feature.dynamic_ecns.enable=true
-vendor.audio.feature.ext_hw_plugin.enable=false
 vendor.audio.feature.external_dsp.enable=false
 vendor.audio.feature.external_speaker.enable=false
 vendor.audio.feature.external_speaker_tfa.enable=false
+vendor.audio.feature.ext_hw_plugin.enable=false
 vendor.audio.feature.fluence.enable=true
 vendor.audio.feature.fm.enable=true
 vendor.audio.feature.hdmi_edid.enable=true
@@ -64,8 +61,8 @@ vendor.audio.feature.snd_mon.enable=true
 vendor.audio.feature.spkr_prot.enable=false
 vendor.audio.feature.src_trkn.enable=true
 vendor.audio.feature.ssrec.enable=true
-vendor.audio.feature.usb_offload.enable=true
 vendor.audio.feature.usb_offload_burst_mode.enable=true
+vendor.audio.feature.usb_offload.enable=true
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false
 vendor.audio.feature.vbat.enable=true
 vendor.audio.feature.wsa.enable=false
@@ -87,7 +84,7 @@ vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
-vendor.audio_hal.period_size=192
+vendor.audio_hal.period_size=240
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
@@ -96,20 +93,17 @@ persist.bluetooth.a2dp_offload.disabled=false
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
-persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.oneplus.bt.asd.chain=0
 persist.vendor.oneplus.bt.asd.firmware=false
 persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
-persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.scram.enabled=false
-persist.vendor.qcom.bluetooth.soc=hastings
+persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
-vendor.qcom.bluetooth.soc=hastings
 
 # Camera
 persist.vendor.camera.privapp.list=com.oneplus.camera,com.oem.autotest,com.oneplus.factorymode
@@ -136,7 +130,8 @@ vendor.display.disable_scaler=0
 vendor.display.enable_async_powermode=0
 vendor.display.enable_optimize_refresh=1
 vendor.display.enable_posted_start_dyn=1
-vendor.display.use_layer_ext=1
+vendor.display.normal_noc_efficiency_factor=0.85
+vendor.display.secure_preview_buffer_format=420_sp
 vendor.display.use_smooth_motion=1
 
 # DRM
@@ -173,6 +168,7 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
+vendor.gralloc.secure_preview_buffer_format=420_sp
 
 # Incremental FS
 ro.incremental.enable=true
@@ -221,8 +217,11 @@ persist.vendor.radio.uicc_se_enabled=true
 ro.com.android.dataroaming=false
 
 # Sensors
-persist.vendor.sensors.allow_non_default_discovery=true
-persist.vendor.sensors.sync_request=true
+persist.vendor.sensors.debug.ssc_qmi_debug=true
+persist.vendor.sensors.enable.bypass_worker=true
+persist.vendor.sensors.enable.rt_task=false
+persist.vendor.sensors.hal_trigger_ssr=false
+persist.vendor.sensors.support_direct_channel=false
 
 # Shutdown
 sys.vendor.shutdown.waittime=500
