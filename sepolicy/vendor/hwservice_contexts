@@ -1,4 +1,4 @@
-vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon    u:object_r:hal_fingerprint_hwservice:s0
+vendor.egistec.hardware.fingerprint::IBiometricsFingerprintRbs             u:object_r:hal_fingerprint_hwservice:s0
 vendor.oneplus.camera.CameraHIDL::IOnePlusCameraProvider                   u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.fingerprint.extension::IVendorFingerprintExtensions         u:object_r:hal_fingerprint_hwservice:s0
 vendor.oneplus.hardware.camera::IOnePlusCameraProvider                     u:object_r:hal_cameraHIDL_hwservice:s0
