@@ -51,10 +51,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
     if [ "$esoc_name" != "" ]; then
 	  setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
-	  #BSP add for 5G diag port config
-	  setprop persist.vendor.sdx50m.online 1
     else
-	  setprop persist.vendor.sdx50m.online 0
 	  case "$(getprop ro.baseband)" in
 	      "apq")
 	          setprop persist.vendor.usb.config diag,adb
@@ -104,7 +101,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	              "sdm845" | "sdm710")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
-	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina")
+	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
 			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
 		      ;;
 	              *)
@@ -142,11 +139,21 @@ esac
 
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
-	usb_product=`getprop vendor.usb.product_string`;
-	vendor_model=`getprop ro.product.vendor.model`;
-	if [ "$usb_product" == "" ]; then
-		setprop vendor.usb.product_string "$vendor_model"
-	fi
+	# Chip-serial is used for unique MSM identification in Product string
+	msm_serial=`cat /sys/devices/soc0/serial_number`;
+	msm_serial_hex=`printf %08X $msm_serial`
+	machine_type=`cat /sys/devices/soc0/machine`
+#ifdef VENDOR_EDIT
+#Fix product name for Android Auto/Ubuntu
+	product_string=`getprop ro.product.model`
+        if [ "$product_string" == "" ]; then
+	        product_string="OnePlus"
+        fi
+#else
+	#product_string="$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
+#endif
+	echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
+	setprop vendor.usb.product_string "$product_string"
 
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
@@ -240,3 +247,10 @@ case "$boot_mode" in
     echo "AFTER boot_mode: diag,adb" > /dev/kmsg
 esac
 #endif
+
+boot_mode=`getprop ro.vendor.factory_mode`
+if [ "$boot_mode" == "1" ]; then
+    echo "boot_mode: factory_mode" > /dev/kmsg
+    setprop persist.vendor.usb.config diag,adb
+    echo "AFTER boot_mode: diag,adb" > /dev/kmsg
+fi

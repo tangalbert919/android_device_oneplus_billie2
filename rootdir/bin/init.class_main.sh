@@ -33,12 +33,27 @@
 baseband=`getprop ro.baseband`
 sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
 datamode=`getprop persist.vendor.data.mode`
+low_ram=`getprop ro.config.low_ram`
 qcrild_status=true
+
+#
+# ifdef VENDOR_EDIT
+# add for dual sim card config
+dual_sim=`cat /sys/module/printk/parameters/dual_sim`
+
+if [ "$dual_sim" = "Y" ]
+then
+    setprop ro.vendor.radio.multisim.config dsds
+else
+    setprop ro.vendor.radio.multisim.config ssss
+fi
+##endif
+#
+
 
 case "$baseband" in
     "apq" | "sda" | "qcs" )
     setprop ro.vendor.radio.noril yes
-    stop ril-daemon
     stop vendor.ril-daemon
     stop vendor.qcrild
 esac
@@ -86,12 +101,10 @@ case "$baseband" in
     if [ "$qcrild_status" = "true" ]; then
         # Make sure both rild, qcrild are not running at same time.
         # This is possible with vanilla aosp system image.
-        stop ril-daemon
         stop vendor.ril-daemon
 
         start vendor.qcrild
     else
-        start ril-daemon
         start vendor.ril-daemon
     fi
 
@@ -129,11 +142,15 @@ case "$baseband" in
     case "$datamode" in
         "tethered")
             start vendor.dataqti
-            start vendor.dataadpl
+            if [ "$low_ram" != "true" ]; then
+              start vendor.dataadpl
+            fi
             ;;
         "concurrent")
             start vendor.dataqti
-            start vendor.dataadpl
+            if [ "$low_ram" != "true" ]; then
+              start vendor.dataadpl
+            fi
             ;;
         *)
             ;;
