@@ -1,8 +1,6 @@
 persist.vendor.bluetooth.bt.uart.log      u:object_r:vendor_oem_bluetooth_prop:s0
 persist.vendor.cwb.debug                  u:object_r:vendor_cwb_prop:s0
 persist.vendor.cwb.dump                   u:object_r:vendor_cwb_prop:s0
-persist.vendor.ese.                       u:object_r:vendor_nfc_prop:s0
-persist.vendor.nfc.                       u:object_r:vendor_nfc_prop:s0
 persist.vendor.oem.bt.debug               u:object_r:vendor_oem_bluetooth_prop:s0
 persist.vendor.oem.btenhanced.debug       u:object_r:vendor_oem_bluetooth_prop:s0
 persist.vendor.oem.btsnoop.debug          u:object_r:vendor_oem_bluetooth_prop:s0
@@ -28,7 +26,6 @@ ro.vendor.product.device.db               u:object_r:vendor_db_security_prop:s0
 ro.vendor.product.manufacturer.db         u:object_r:vendor_db_security_prop:s0
 vendor.calibration.fingerprint            u:object_r:vendor_fingerprint_prop:s0
 vendor.copy.opdiagnose.data               u:object_r:vendor_shell_prop:s0
-vendor.nfc.                               u:object_r:vendor_nfc_prop:s0
 vendor.oem.rbr.log.clean                  u:object_r:vendor_default_prop:s0
 vendor.oem.wifi.socket.quit               u:object_r:vendor_set_wlan_prop:s0
 vendor.service.wifi.socket.enable         u:object_r:vendor_oem_wifi_prop:s0
