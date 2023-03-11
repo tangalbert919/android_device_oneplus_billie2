@@ -3,15 +3,15 @@
 ## https://www.oneplus.com/support/softwareupgrade/details?code=PM1605856872898
 
 # ACDB
-vendor/odm/etc/acdbdata/acdb_version
-vendor/odm/etc/acdbdata/Bluetooth_cal.acdb
-vendor/odm/etc/acdbdata/General_cal.acdb
-vendor/odm/etc/acdbdata/Global_cal.acdb
-vendor/odm/etc/acdbdata/Handset_cal.acdb
-vendor/odm/etc/acdbdata/Hdmi_cal.acdb
-vendor/odm/etc/acdbdata/Headset_cal.acdb
-vendor/odm/etc/acdbdata/Speaker_cal.acdb
-vendor/odm/etc/acdbdata/workspaceFile.qwsp
+vendor/odm/etc/acdbdata/acdb_version:odm/etc/acdbdata/acdb_version
+vendor/odm/etc/acdbdata/Bluetooth_cal.acdb:odm/etc/Bluetooth_cal.acdb
+vendor/odm/etc/acdbdata/General_cal.acdb:odm/etc/acdbdata/General_cal.acdb
+vendor/odm/etc/acdbdata/Global_cal.acdb:odm/etc/acdbdata/Global_cal.acdb
+vendor/odm/etc/acdbdata/Handset_cal.acdb:odm/etc/acdbdata/Handset_cal.acdb
+vendor/odm/etc/acdbdata/Hdmi_cal.acdb:odm/etc/acdbdata/Hdmi_cal.acdb
+vendor/odm/etc/acdbdata/Headset_cal.acdb:odm/etc/acdbdata/Headset_cal.acdb
+vendor/odm/etc/acdbdata/Speaker_cal.acdb:odm/etc/acdbdata/Speaker_cal.acdb
+vendor/odm/etc/acdbdata/workspaceFile.qwsp:odm/etc/acdbdata/workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
@@ -717,7 +717,7 @@ vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
 vendor/lib/libsn100u_fw.so
 
 # ODM feature list
-vendor/odm/etc/odm_feature_list
+vendor/odm/etc/odm_feature_list:odm/etc/odm_feature_list
 
 # OMX
 vendor/lib/libAlacSwDec.so
