@@ -125,7 +125,6 @@ PRODUCT_PACKAGES += \
     audio.primary.bengal \
     audio.r_submix.default \
     audio.usb.default \
-    audio_amplifier.bengal \
     liba2dpoffload \
     libaudiopreprocessing \
     libbatterylistener \
