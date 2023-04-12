@@ -1,5 +1,5 @@
 
-# Copyright (C) 2018-2022 The LineageOS Project
+# Copyright (C) 2018-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -189,7 +189,7 @@ CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/apns-conf.xml
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2023-02-05
+VENDOR_SECURITY_PATCH := 2023-04-05
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2022 The LineageOS Project
+# Copyright (C) 2018-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -37,4 +37,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=OnePlusN100 \
     TARGET_PRODUCT=OnePlusN100
 
-BUILD_FINGERPRINT := OnePlus/OnePlusN100/OnePlusN100:11/RKQ1.201217.002/2302071508:user/release-keys
+BUILD_FINGERPRINT := OnePlus/OnePlusN100/OnePlusN100:11/RKQ1.201217.002/2303231655:user/release-keys
