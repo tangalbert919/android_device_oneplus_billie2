@@ -1,0 +1,2 @@
+allow init op2_file:dir mounton;
+allow init op2_block_device:blk_file { ioctl write };
