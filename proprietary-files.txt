@@ -1,5 +1,5 @@
 ## All property files from this list, unless pinned and noted otherwise,
-## are from OnePlus Nord N100 (11.0.12.BE81AA). OTAs to extract from can be found here:
+## are from OnePlus Nord N100 (11.0.13.BE81AA). OTAs to extract from can be found here:
 ## https://www.oneplus.com/support/softwareupgrade/details?code=PM1605856872898
 
 # ACDB
@@ -257,6 +257,7 @@ vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libipebpsstriping.so
+vendor/lib64/libjpege.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinelog.so
@@ -295,6 +296,7 @@ vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
+vendor/bin/hvdcp_opti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CNE
