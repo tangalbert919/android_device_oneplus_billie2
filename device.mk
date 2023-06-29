@@ -209,11 +209,9 @@ PRODUCT_PACKAGES += \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.qti.qcv.sh \
-    init.qti.cust.rc \
     init.oem.debug.rc \
     init.oem.rc \
     init.oem_ftm.rc \
-    init.oem_rf.rc \
     init.oplus.hw.rc \
     init.oplus.hw.rc.recovery \
     init.qcom.factory.rc \
