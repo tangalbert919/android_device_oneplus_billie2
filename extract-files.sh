@@ -68,6 +68,9 @@ function blob_fixup() {
         system_ext/lib64/lib-imsvideocodec.so)
             grep -q libgui_shim.so "${2}" || "${PATCHELF}" --add-needed libgui_shim.so "${2}"
             ;;
+        odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
     esac
 }
 

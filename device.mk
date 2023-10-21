@@ -475,7 +475,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    libstdc++_vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \
