@@ -241,8 +241,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
     gralloc.bengal \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
@@ -253,7 +251,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libutilscallstack.vendor \
     libvulkan \
-    memtrack.bengal \
     vendor.display.config@1.0.vendor \
     vendor.display.config@1.15.vendor \
     vendor.display.config@2.0 \
@@ -264,7 +261,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.memtrack-service
 
 # Doze
 PRODUCT_PACKAGES += \
