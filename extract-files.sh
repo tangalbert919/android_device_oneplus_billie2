@@ -68,6 +68,10 @@ function blob_fixup() {
             grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
             sed -i "s/com.oem.autotest/\x00om.oem.autotest/" "${2}"
             ;;
+        vendor/lib64/hw/fingerprint.default.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s/fingerprint.egis.et/fingerprint\x00\x00\x00\x00\x00\x00\x00\x00/" "{$2}"
+            ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             [ "$2" = "" ] && return 0
             "${SIGSCAN}" -p "27 0B 00 94" -P "1F 20 03 D5" -f "${2}"
